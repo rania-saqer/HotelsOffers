@@ -1,0 +1,112 @@
+<style>
+body{
+ background-image : url("https://a.cdn-hotels.com/cos/heroimage/homepage/Dubai-42-74722822.jpg") ;
+ color :#00004c;
+ font-family:verdana;
+   /* Center and scale the image nicely */
+     background-position: center;
+     background-repeat: no-repeat;
+    background-size: cover;
+   background-attachment: fixed; 
+ 
+}
+
+td{
+ font-size : 13px;
+ padding :5px ;
+  color :black;
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+ 
+   width:65%;
+    padding :10px;
+    background-color : #e6ffe6  ;
+   opacity:0.87;
+  float:left;
+  border-radius: 30px; /* Curve of border corners */
+  
+  
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.searchbtn {
+	background-color: #ffff00; /* Blue background color */
+	border-radius: 30px; /* Curve of border corners */
+	text-transform: uppercase; /* Make letters uppercase */
+	color: #00004c; /* Text color */
+	width :220px;
+	height :60px;
+	font-weight:bold;
+	font-size:15px;
+	opacity : 1;
+
+}
+.tdCards{
+vertical-align : top ;
+
+}
+.dealbtn{
+	background-color: #ffff00; /* Blue background color */
+	border-radius: 30px; /* Curve of border corners */
+	text-transform: uppercase; /* Make letters uppercase */
+	color: #00004c; /* Text color */
+	width :150px;
+	height :20px;
+	font-weight:bold;
+	font-size:12px;
+	opacity : 1;
+
+}
+
+.HotelCard {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    background-color :   #e6ffe6;/* #00004c  #222b2e ;*/
+    border-radius: 10px; /* Curve of border corners */
+    min-height : 320px;
+    width : 240px;
+    border:2px solid white;
+    color:black;
+    opacity : 0.9;
+}
+
+.moreInfo{
+
+/* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    background-color :   #4dffa6;/* #00004c  #222b2e ;*/
+    border-radius: 10px; /* Curve of border corners */
+    min-height : 320px;
+    width : 240px;
+    border:2px solid white;
+    color:black;
+    opacity : 0.9;
+}
+/* On mouse-over, add a deeper shadow */
+.HotelCard:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+    padding: 2px 16px;
+   
+}
+.hotelImage{
+ border-radius: 2px; /* Curve of border corners */
+ padding:2px;
+ margin:5px;
+}
+//rating stars
+
+</style>
