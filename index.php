@@ -20,9 +20,9 @@
        <div class="card">
 
            <form method="POST" action="controller/HotelOffersController.php" >
- <h4  style="color: black">
-          Search for  Best Hotels Offers :)
-        </h4>
+             <h4  style="color: black">
+                  Search for  Best Hotels Offers :)
+            </h4>
 
               <table>
 					<tr>
