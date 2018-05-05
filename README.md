@@ -1,5 +1,6 @@
 # HotelsOffers
 This is a website  show  best Hotel offers 
+
 xampp is simple and lightweight solution that allows you to create a local web server for testing purposes :
 
 1- Go to the Apache Friends website and download XAMPP.
@@ -27,3 +28,4 @@ the solution was :
 3- Restart xampp services.
 
  
+
