@@ -35,7 +35,7 @@
 					<tr>
 						 <td class= "t1" >  &nbsp; </td>
 						 <td>Region Ids</td>
-						 <td><input type="text" name="filters[regionIds]" placeHolder="ex:6126616" /></td>
+						 <td><input type="text" name="filters[regionIds]" placeHolder="ex:6126616,178286" /></td>
 						 <td class= "t1" > &nbsp; </td>
 						 <td class= "t1" > &nbsp;</td>
 					</tr>

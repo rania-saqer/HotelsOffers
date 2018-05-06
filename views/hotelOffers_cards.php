@@ -7,7 +7,7 @@
 <html >
    <head>
       <title>
-         Expedia Hotels Offer
+         Expedia Hotels Offers
       </title>
       <script src="../jquery/jquery-3.3.1.min.js"></script>
       <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
@@ -21,18 +21,24 @@
 
          <div id="container">
 
-             <a href="http://localhost:8080/expediaAssesment/">Back to  search Page</a>
+            <a href="http://localhost:8080/expediaAssesment/">Back to  search Page</a>
+
+            <?php if($error){ ?>
+             <h3>
+             <?= $errorMessage ?>
+             </h3>
+            <?php }else{ ?>
             <table>
 				<body>
-				<tr>
+			    	<tr>
 						 <?php
 						 $counter = 0;
 						 foreach($offers as $index => $offer ){
 						 $counter ++ ;
 						 ?>
 
-       <td class="HotelCard">
-          <div  class="" style="display:table-cell; vertical-align:middle;">
+						   <td class="HotelCard">
+							  <div  class="" style="display:table-cell; vertical-align:middle;">
 
 						        <div class="">
 								  <img src="<?= $offer->hotelInfo->hotelImageUrl ?>" class="hotelImage" style="width:35%;" alt="<?= $offer->hotelInfo->hotelName ?>"  >
@@ -60,7 +66,7 @@
 
 									<div>
 
-									<button class="dealbtn" id="dealbtn_<?= $index ?>"  onclick="javascript:showDetails(<?= $index ?>)" >
+									<button class="detialbtn" id="dealbtn_<?= $index ?>"  onclick="javascript:showDetails(<?= $index ?>)" >
 										  Show More Info
 									</button>
 									</div>
@@ -69,11 +75,9 @@
 
 								</div> </div>
 
-          <div id="detailsCard_<?= $index ?>" style="text-align:left; display:table-cell; vertical-align:middle;display: none;border:1px solid black">
+                           <div id="detailsCard_<?= $index ?>" style="text-align:left; display:table-cell; vertical-align:middle;display: none;border:1px solid black">
 
-						        <div class="">
-
-
+						        <div >
 								  <div class="container"  style="direction:ltr">
 
 									<h3 > FROM   <?php echo $offer->offerDateRange->travelStartDate[2] ."-". $offer->offerDateRange->travelStartDate[1] ."-". $offer->offerDateRange->travelStartDate[0]; ?> TO
@@ -93,26 +97,25 @@
                                     <h4> Full Destination : &nbsp; <?=  $offer->destination->longName ?>  </h4>
 
 
-
-
 									<div style="width:180px">
 									<a href="http://maps.google.com/maps?z=12&t=m&q=<?= $offer->hotelInfo->hotelLatitude ?>,<?= $offer->hotelInfo->hotelGuestReviewRating ?>" target="_blank" >
 									<img src= "../img/google-maps-icon.png" style="width:40px"  />
 									</a>
-									<a href="../../<?= $offer->hotelUrls->hotelInfositeUrl ?>)" target="_blank" >
-									<img src= "../img/hotel-icon.png" style="width:27px"  />
-									</a>
+
 
 									</div>
 
 								  </div>
 
 								</div></div>
-      </td>
+                           </td>
 	                       <?php if($counter == 3){
 								echo "</tr><tr>";
 								$counter = 0;
 								} ?>
+
+                <?php } ?>
+                </tr></table>
                 <?php } ?>
           </div>
       </center>
@@ -137,18 +140,17 @@
 
 			$('.stars').stars();
 
-
+             //show card details
 			function showDetails( index)
 			{
 
 			    if ($("#detailsCard_"+index).is(':visible')){
-			        //  $("#detailsCard_"+index).css('display' , 'none');
 			            $("#detailsCard_"+index).hide();
-			            $("#dealbtn_"+index).html(" Show More Info");
+			            $("#detialbtn_"+index).html(" Show More Info");
 
 			     }else{
-			           $("#detailsCard_"+index).show(); //dealbtn
-			           $("#dealbtn_"+index).html(" Hide More Info");
+			           $("#detailsCard_"+index).show();
+			           $("#detailbtn_"+index).html(" Hide More Info");
 			           $("#detailsCard_"+index).css('display' , 'table-cell');
 			     }
 

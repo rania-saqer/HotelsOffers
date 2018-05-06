@@ -1,30 +1,41 @@
 <?php
 
 require_once "../Model/APICaller.php";
-//use Drupal\first\APICaller;
+
+
+$params = [];
+$url = "https://offersvc.expedia.com/offers/v2/getOffers?scenario=deal-finder&page=foo&uid=foo&productType=Hotel";
+
 
 if(isset($_POST['getOffers'] )){
-//echo "<pre>";
-//var_dump($_POST);die;
-
-$params = $_POST['filters'];
+    $params = $_POST['filters'];
 }
-$url = "https://offersvc.expedia.com/offers/v2/getOffers?scenario=deal-finder&page=foo&uid=foo&productType=Hotel";
-//$params = ['lengthOfStay' => '7'];
+
 
 $object = new APICaller($url,$params);
-
 $response = $object->callAPI();
 
-$response = json_decode($response);
-$offers = $response-> offers->Hotel;
+//check if the call successed
+if($response !== false) {
+   $error=false;
+   $response = json_decode($response);
+   $offers = (isset( $response-> offers->Hotel ))? $response-> offers->Hotel : [];
+   if(count($offers)== 0){
+      $error = true;
+      $errorMessage = "Ops! There isn't any matched offers, Please search again !" ;
+   }
 
-//echo "<br>";
-//var_dump($offers);die;
+}else{
+  $error = true;
+  $errorMessage = "Ops! There is something wrong, Please try again !" ;
+}
+
+ include("../views/hotelOffers_cards.php");
 
 
 
-include("../views/hotelOffers_cards.php");
+
+
 
 ?>
 
