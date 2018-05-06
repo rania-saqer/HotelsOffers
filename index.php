@@ -1,6 +1,6 @@
 <?php
 
-   include("/css/main.css");
+   include("css/main.css");
 
 ?>
 

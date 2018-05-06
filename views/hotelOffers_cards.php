@@ -21,7 +21,7 @@
 
          <div id="container">
 
-            <a href="http://localhost:8080/expediaAssesment/">Back to  search Page</a>
+            <a href="../">Back to  search Page</a>
 
             <?php if($error){ ?>
              <h3>
