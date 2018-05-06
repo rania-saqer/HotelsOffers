@@ -1,5 +1,5 @@
 # HotelsOffers
-This is a website  show  best Hotel offers 
+This is a website to show  best Hotel offers 
 
 xampp is simple and lightweight solution that allows you to create a local web server for testing purposes :
 
