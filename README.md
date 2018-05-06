@@ -1,7 +1,7 @@
 # HotelsOffers
 This is a website to show  best Hotel offers 
 
-I used xampp , that is simple and lightweight solution that allows you to create a local web server for testing purposes,Please look at instructions for setting the site up in a local sandbox below :
+I used xampp ,it is simple and lightweight solution that allows you to create a local web server for testing purposes,Please look at instructions for setting the site up in a local sandbox below :
 
 1- Go to the Apache Friends website and download XAMPP.
 2- In the next window, you will be asked to select which components of the software you would like to 
@@ -19,8 +19,9 @@ If the installation process went well and everything is running smoothly, the co
 9- Use https://github.com/rania-saqer/HotelsOffers.git and checkout using git or download zip in htdocs folder in xampp directory .
 10- then you can define virtual host  or access it by localhost/folderName 
 
-I faced problem with  PHP - SSL certificate error:  cURL cannot conect to HTTPS hosts , when i consumes th API ,
-the solution was :
+I faced a problem with  PHP - SSL certificate error: 
+"cURL cannot conect to HTTPS hosts when I consumes the API",
+and the solution was :
 1- Download the certificate bundle, i add it in the project. Copy it and add it to your xampp directory ,ex: E:/xampp/cacert.pem 
 2- Add these lines to your cert in both php.ini files:
    curl.cainfo="C:/wamp/cacert.pem"
