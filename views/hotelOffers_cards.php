@@ -9,6 +9,9 @@
       <title>
          Expedia Hotels Offers
       </title>
+      <link rel="icon" href="../img/favicon.ico" type="image/x-icon"/>
+      <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon"/>
+
       <script src="../jquery/jquery-3.3.1.min.js"></script>
       <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
@@ -21,8 +24,8 @@
 
          <div id="container">
 
-            <a href="../">Back to  search Page</a>
-
+            <a href="../">Home Page</a>
+<br><br>
             <?php if($error){ ?>
              <h3>
              <?= $errorMessage ?>

@@ -6,9 +6,11 @@
 
 <html >
    <head>
-   <title>
-      Expedia Hotels Offer
-   </title>
+      <title>
+         Expedia Hotels Offer
+      </title>
+     <link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
+     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
    </head>
    <body>
       <center>
