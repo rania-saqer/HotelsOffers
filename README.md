@@ -1,7 +1,7 @@
 # HotelsOffers
 This is a website to show  best Hotel offers 
 
-xampp is simple and lightweight solution that allows you to create a local web server for testing purposes :
+I used xampp , that is simple and lightweight solution that allows you to create a local web server for testing purposes,Please look at instructions for setting the site up in a local sandbox below :
 
 1- Go to the Apache Friends website and download XAMPP.
 2- In the next window, you will be asked to select which components of the software you would like to 
